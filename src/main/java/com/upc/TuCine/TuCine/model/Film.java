@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -36,4 +38,7 @@ public class Film {
     @JoinColumn(name = "ContentRating_id", nullable = false, foreignKey = @ForeignKey(name = "FK_CONTENTRATING_ID"))
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private ContentRating ContentRating_id;
+
+    @ManyToMany
+    private List<Actor> actors;
 }
