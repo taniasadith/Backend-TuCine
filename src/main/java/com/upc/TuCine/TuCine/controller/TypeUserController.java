@@ -36,4 +36,6 @@ public class TypeUserController {
     public ResponseEntity<TypeUser> createTypeUser(@RequestBody TypeUser typeUser){
         return new ResponseEntity<TypeUser>(typeUserRepository.save(typeUser), HttpStatus.CREATED);
     }
+
+    //find by id
 }

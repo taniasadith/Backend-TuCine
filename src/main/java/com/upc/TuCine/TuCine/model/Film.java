@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -41,4 +40,7 @@ public class Film {
 
     @ManyToMany
     private List<Actor> actors;
+
+    @ManyToMany
+    private List<Category> categories;
 }
